@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "@/lib/i18n";
 import { school, ui } from "@/content/site";
 import { img } from "@/lib/images";
-import { EventsSection, FacilitiesSection, FeaturesSection, NoticesSection, PrincipalSection, ProgramsSection, TestimonialsSection, WelcomeSection } from "@/components/site/Sections";
+import { EventsSection, FacilitiesSection, FeaturesSection, NoticesSection, ProgramsSection, WelcomeSection } from "@/components/site/Sections";
 import { ContactSection } from "@/components/site/Forms";
 
 export const Route = createFileRoute("/")({
@@ -32,26 +32,26 @@ function Index() {
   return (
     <>
       <section className="relative isolate overflow-hidden bg-navy-deep text-on-navy">
-        <img src={img.hero} alt={t({ en: "Students walking to school in the hills of Rolpa", ne: "रोल्पाका पहाडमा विद्यालय जाँदै विद्यार्थीहरू" })} width={1920} height={1088} className="absolute inset-0 -z-10 h-full w-full object-cover" />
+        <img src={img.classroom} alt={t({ en: "A teacher helping students learn in class", ne: "कक्षामा विद्यार्थीहरूलाई सिक्न सहयोग गर्दै शिक्षिका" })} width={1280} height={960} className="absolute inset-0 -z-10 h-full w-full object-cover" />
         <div className="absolute inset-0 -z-10 bg-hero-overlay" />
-        <div className="container-x flex min-h-[78vh] flex-col justify-center py-24">
-          <span className="eyebrow animate-rise">{t(school.address)}</span>
-          <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.1] animate-rise [animation-delay:100ms] sm:text-6xl">{t(ui.heroTitle)}</h1>
-          <p className="mt-6 max-w-xl text-lg text-on-navy/85 animate-rise [animation-delay:200ms]">{t(ui.heroText)}</p>
-          <div className="mt-9 flex flex-wrap gap-3 animate-rise [animation-delay:300ms]">
-            <Button asChild variant="gold" size="xl"><Link to="/about">{t(ui.explore)}</Link></Button>
-            <Button asChild variant="heroOutline" size="xl"><Link to="/admission">{t(ui.inquiry)}</Link></Button>
+        <div className="container-x flex min-h-[72vh] flex-col justify-center py-20 sm:min-h-[76vh] sm:py-24">
+          <div className="max-w-3xl border-l-2 border-gold pl-5 sm:pl-8">
+            <span className="animate-rise text-xs font-semibold uppercase tracking-[0.2em] text-gold sm:text-sm">{t(school.address)}</span>
+            <h1 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.08] text-on-navy animate-rise [animation-delay:100ms] sm:text-6xl lg:text-7xl">{t(ui.heroTitle)}</h1>
+            <p className="mt-6 max-w-xl text-base leading-relaxed text-on-navy/90 animate-rise [animation-delay:200ms] sm:text-lg">{t(ui.heroText)}</p>
+            <div className="mt-8 flex flex-wrap gap-3 animate-rise [animation-delay:300ms]">
+              <Button asChild variant="gold" size="xl" className="rounded-md"><Link to="/about">{t(ui.explore)}</Link></Button>
+              <Button asChild variant="heroOutline" size="xl" className="rounded-md"><Link to="/admission">{t(ui.inquiry)}</Link></Button>
+            </div>
           </div>
         </div>
       </section>
       <WelcomeSection />
-      <PrincipalSection />
       <FeaturesSection />
       <ProgramsSection />
       <FacilitiesSection />
       <NoticesSection />
       <EventsSection />
-      <TestimonialsSection />
       <ContactSection />
     </>
   );

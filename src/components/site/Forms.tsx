@@ -174,7 +174,7 @@ export function ContactSection() {
         <ul className="mt-8 space-y-5">
           <li className="flex gap-4"><span className="rounded-xl bg-gold-soft p-3 text-primary"><MapPin className="h-5 w-5" /></span><span><span className="block text-sm text-muted-foreground">{t({ en: "Address", ne: "ठेगाना" })}</span><span className="font-medium text-primary">{t(school.address)}</span></span></li>
           <li className="flex gap-4"><span className="rounded-xl bg-gold-soft p-3 text-primary"><Mail className="h-5 w-5" /></span><span><span className="block text-sm text-muted-foreground">{t({ en: "Email", ne: "इमेल" })}</span><a href={`mailto:${school.email}`} className="break-all font-medium text-primary hover:underline">{school.email}</a></span></li>
-          <li className="flex gap-4"><span className="rounded-xl bg-gold-soft p-3 text-primary"><Phone className="h-5 w-5" /></span><span><span className="block text-sm text-muted-foreground">{t({ en: "Phone", ne: "फोन" })}</span><span className="font-medium text-primary">{school.phone || t({ en: "To be added", ne: "थपिन बाँकी" })}</span></span></li>
+          {school.phone && <li className="flex gap-4"><span className="rounded-xl bg-gold-soft p-3 text-primary"><Phone className="h-5 w-5" /></span><span><span className="block text-sm text-muted-foreground">{t({ en: "Phone", ne: "फोन" })}</span><a className="font-medium text-primary hover:underline" href={`tel:${school.phone}`}>{school.phone}</a></span></li>}
         </ul>
         <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-soft">
           <iframe title="Map" src={`https://www.google.com/maps?q=${q}&output=embed`} className="h-72 w-full" loading="lazy" referrerPolicy="no-referrer-when-downgrade" />

@@ -69,7 +69,7 @@
   --ring: oklch(0.74 0.11 88);
   --shadow-soft: 0 10px 30px -12px color-mix(in oklab, var(--primary) 22%, transparent);
   --shadow-lift: 0 24px 50px -20px color-mix(in oklab, var(--primary) 35%, transparent);
-  --overlay-hero: linear-gradient(100deg, color-mix(in oklab, var(--navy-deep) 92%, transparent) 0%, color-mix(in oklab, var(--navy-deep) 65%, transparent) 50%, color-mix(in oklab, var(--navy-deep) 15%, transparent) 100%);
+  --overlay-hero: linear-gradient(100deg, rgb(0 0 0 / 78%) 0%, rgb(0 0 0 / 58%) 48%, rgb(0 0 0 / 20%) 100%), linear-gradient(0deg, rgb(0 0 0 / 20%), transparent 58%);
 }
 
 @layer base {

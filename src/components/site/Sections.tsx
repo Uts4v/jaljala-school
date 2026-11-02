@@ -13,23 +13,19 @@ import { PlaceholderTag, Reveal, SectionHeading } from "./Bits";
 export function WelcomeSection() {
   const { t } = useLang();
   return (
-    <section className="container-x grid items-center gap-12 py-20 lg:grid-cols-2 lg:py-28">
-      <Reveal className="relative">
-        <img src={img.classroom} alt={t({ en: "Students learning in a classroom", ne: "कक्षाकोठामा सिक्दै विद्यार्थीहरू" })} loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full rounded-3xl object-cover shadow-lift" />
-        <div className="absolute -bottom-6 -right-4 hidden rounded-2xl bg-primary p-6 text-primary-foreground shadow-lift sm:block">
-          <p className="font-display text-3xl text-gold">“</p>
-          <p className="max-w-[14rem] text-sm">{t({ en: "Knowledge, discipline and kindness — together.", ne: "ज्ञान, अनुशासन र दयालुता — सँगसँगै।" })}</p>
-        </div>
+    <section className="container-x grid items-center gap-10 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:py-24">
+      <Reveal>
+        <img src={img.reading} alt={t({ en: "Students reading together in the school library", ne: "विद्यालयको पुस्तकालयमा सँगै पढ्दै विद्यार्थीहरू" })} loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full object-cover" />
       </Reveal>
       <div>
         <SectionHeading eyebrow={welcome.eyebrow} title={welcome.title} text={welcome.body} />
-        <Reveal delay={120} className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <Reveal delay={120} className="mt-8 grid grid-cols-2 border-t border-border sm:grid-cols-4">
           {welcome.values.map((v) => (
-            <div key={v.en} className="rounded-xl border border-border bg-card px-4 py-3 text-center text-sm font-semibold text-primary">{t(v)}</div>
+            <div key={v.en} className="border-b border-border py-3 text-sm font-semibold text-primary">{t(v)}</div>
           ))}
         </Reveal>
         <Reveal delay={200} className="mt-8">
-          <Button asChild variant="navy" size="xl"><Link to="/about">{t(ui.readMore)}</Link></Button>
+          <Button asChild variant="navy"><Link to="/about">{t(ui.readMore)} <span aria-hidden="true">→</span></Link></Button>
         </Reveal>
       </div>
     </section>
@@ -67,23 +63,26 @@ export function PrincipalSection({ full = false }: { full?: boolean }) {
 export function FeaturesSection() {
   const { t } = useLang();
   return (
-    <section className="container-x py-20 lg:py-28">
-      <SectionHeading center eyebrow={{ en: "Why choose us", ne: "किन हामी" }} title={{ en: "Why Choose Our School?", ne: "हाम्रो विद्यालय किन रोज्ने?" }} />
-      <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {features.map((f, i) => {
-          const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[f.icon];
-          return (
-            <Reveal key={f.icon} delay={i * 60}>
-              <div className="group h-full rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:shadow-lift">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gold-soft text-primary transition-colors group-hover:bg-primary group-hover:text-gold">
-                  <Icon className="h-6 w-6" />
+    <section className="bg-secondary">
+      <div className="container-x py-16 sm:py-20 lg:py-24">
+        <SectionHeading eyebrow={{ en: "What guides us", ne: "हाम्रा आधारहरू" }} title={{ en: "Learning built on strong foundations", ne: "बलियो आधारमा बनेको सिकाइ" }} />
+        <div className="mt-10 grid gap-x-10 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, i) => {
+            const Icon = (Icons as unknown as Record<string, Icons.LucideIcon>)[f.icon];
+            return (
+              <Reveal key={f.icon} delay={i * 60}>
+                <div className="group h-full border-t border-primary/20 py-6">
+                  <div className="flex items-center gap-3 text-gold">
+                    <Icon className="h-5 w-5" />
+                    <span className="font-display text-sm">0{i + 1}</span>
+                  </div>
+                  <h3 className="mt-4 text-lg font-semibold text-primary">{t(f.title)}</h3>
+                  <p className="mt-2 max-w-sm text-sm leading-relaxed text-muted-foreground">{t(f.text)}</p>
                 </div>
-                <h3 className="mt-5 text-xl font-semibold text-primary">{t(f.title)}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{t(f.text)}</p>
-              </div>
-            </Reveal>
-          );
-        })}
+              </Reveal>
+            );
+          })}
+        </div>
       </div>
     </section>
   );
@@ -93,19 +92,18 @@ export function ProgramsSection() {
   const { t } = useLang();
   return (
     <section className="bg-navy-deep text-on-navy">
-      <div className="container-x py-20 lg:py-28">
+      <div className="container-x py-16 sm:py-20 lg:py-24">
         <Reveal className="max-w-2xl">
           <span className="eyebrow">{t({ en: "Academics", ne: "शैक्षिक" })}</span>
           <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">{t({ en: "Academic Programs", ne: "शैक्षिक कार्यक्रमहरू" })}</h2>
-          <p className="mt-4 text-on-navy/70">{t({ en: "Grade ranges shown are placeholders until confirmed by the school.", ne: "देखाइएका कक्षा दायरा विद्यालयबाट पुष्टि नभएसम्म नमुना हुन्।" })}</p>
+          <p className="mt-4 text-on-navy/75">{t({ en: "Learning experiences that build strong foundations and encourage each student to keep progressing.", ne: "बलियो आधार बनाउँदै हरेक विद्यार्थीलाई निरन्तर अघि बढ्न प्रोत्साहन गर्ने सिकाइ।" })}</p>
         </Reveal>
         <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {programs.map((p, i) => (
             <Reveal key={p.title.en} delay={i * 80}>
-              <div className="h-full rounded-2xl border border-on-navy/10 bg-on-navy/5 p-7 transition hover:border-gold/60">
-                <p className="font-display text-4xl text-gold">0{i + 1}</p>
-                <h3 className="mt-4 text-xl font-semibold">{t(p.title)}</h3>
-                <p className="mt-1 text-xs font-medium uppercase tracking-wider text-gold/90">{t(p.grades)}</p>
+              <div className="h-full border-t border-on-navy/25 pt-5">
+                <p className="font-display text-3xl text-gold">0{i + 1}</p>
+                <h3 className="mt-4 text-lg font-semibold">{t(p.title)}</h3>
                 <p className="mt-3 text-sm text-on-navy/70">{t(p.text)}</p>
               </div>
             </Reveal>
@@ -120,11 +118,11 @@ export function FacilitiesSection() {
   const { t } = useLang();
   return (
     <section className="container-x py-20 lg:py-28">
-      <SectionHeading eyebrow={{ en: "Campus", ne: "परिसर" }} title={{ en: "School Facilities", ne: "विद्यालयका सुविधाहरू" }} text={{ en: "Facilities marked “to be confirmed” will be updated once verified by the school.", ne: "“पुष्टि हुन बाँकी” भनिएका सुविधाहरू विद्यालयले प्रमाणित गरेपछि अद्यावधिक गरिनेछ।" }} />
+      <SectionHeading eyebrow={{ en: "Campus", ne: "परिसर" }} title={{ en: "School Facilities", ne: "विद्यालयका सुविधाहरू" }} text={{ en: "Spaces for learning, activity and community.", ne: "सिकाइ, गतिविधि र समुदायका लागि स्थानहरू।" }} />
       <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {facilities.map((f, i) => (
           <Reveal key={f.key} delay={i * 60}>
-            <article className="group relative overflow-hidden rounded-2xl shadow-soft">
+            <article className="group relative overflow-hidden">
               <img src={facilityImage[f.key]} alt={t(f.title)} loading="lazy" width={1280} height={960} className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />
               <div className="absolute inset-0 bg-gradient-to-t from-navy-deep/90 via-navy-deep/20 to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-on-navy">

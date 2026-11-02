@@ -40,7 +40,7 @@ export function Footer() {
           <ul className="mt-4 space-y-3 text-sm text-on-navy/80">
             <li className="flex gap-3"><MapPin className="mt-0.5 h-4 w-4 shrink-0 text-gold" />{t(school.address)}</li>
             <li className="flex gap-3"><Mail className="mt-0.5 h-4 w-4 shrink-0 text-gold" /><a href={`mailto:${school.email}`} className="break-all hover:text-gold">{school.email}</a></li>
-            <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" />{school.phone || t({ en: "Phone: to be added", ne: "फोन: थपिन बाँकी" })}</li>
+            {school.phone && <li className="flex gap-3"><Phone className="mt-0.5 h-4 w-4 shrink-0 text-gold" /><a href={`tel:${school.phone}`} className="hover:text-gold">{school.phone}</a></li>}
           </ul>
         </div>
       </div>

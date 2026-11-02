@@ -39,7 +39,7 @@ export const ui = {
   apply: { en: "Apply for Admission", ne: "भर्नाका लागि आवेदन" },
   explore: { en: "Explore Our School", ne: "हाम्रो विद्यालय हेर्नुहोस्" },
   inquiry: { en: "Admission Inquiry", ne: "भर्ना सोधपुछ" },
-  heroTitle: { en: "Building Bright Futures Through Quality Education.", ne: "गुणस्तरीय शिक्षामार्फत उज्ज्वल भविष्य निर्माण।" },
+  heroTitle: { en: "A caring school, rooted in the Rolpa community.", ne: "रोल्पाको समुदायसँग जोडिएको स्नेही विद्यालय।" },
   heroText: {
     en: "A caring English-medium school in the hills of Rolpa, nurturing curious minds, good character and a love of learning.",
     ne: "रोल्पाका पहाडहरूमा रहेको स्नेहपूर्ण अङ्ग्रेजी माध्यम विद्यालय, जिज्ञासु मन, असल चरित्र र सिकाइप्रतिको प्रेम विकास गर्दै।",
@@ -98,18 +98,15 @@ export const features: { icon: string; title: T; text: T }[] = [
   { icon: "HeartHandshake", title: { en: "Safe & Supportive", ne: "सुरक्षित र सहयोगी" }, text: { en: "A caring environment where children feel at home.", ne: "बालबालिकाले घरजस्तै महसुस गर्ने स्नेहपूर्ण वातावरण।" } },
 ];
 
-export const programs: { title: T; grades: T; text: T }[] = [
-  { title: { en: "Early Childhood Education", ne: "प्रारम्भिक बाल शिक्षा" }, grades: { en: "Nursery – UKG (to be confirmed)", ne: "नर्सरी – यूकेजी (पुष्टि हुन बाँकी)" }, text: { en: "Play-based learning, early literacy and numeracy.", ne: "खेलमा आधारित सिकाइ, प्रारम्भिक अक्षर र अङ्क ज्ञान।" } },
-  { title: { en: "Primary Education", ne: "प्राथमिक शिक्षा" }, grades: { en: "Grades 1 – 5 (to be confirmed)", ne: "कक्षा १ – ५ (पुष्टि हुन बाँकी)" }, text: { en: "Strong basics in English, Nepali, mathematics and our environment.", ne: "अङ्ग्रेजी, नेपाली, गणित र हाम्रो वरिपरिमा बलियो आधार।" } },
-  { title: { en: "Basic Education", ne: "आधारभूत शिक्षा" }, grades: { en: "Grades 6 – 8 (to be confirmed)", ne: "कक्षा ६ – ८ (पुष्टि हुन बाँकी)" }, text: { en: "Broader subjects, projects and independent study habits.", ne: "विस्तृत विषय, परियोजना कार्य र स्वाध्यायको बानी।" } },
-  { title: { en: "Secondary Education", ne: "माध्यमिक शिक्षा" }, grades: { en: "Grades 9 – 10 (to be confirmed)", ne: "कक्षा ९ – १० (पुष्टि हुन बाँकी)" }, text: { en: "Focused preparation following the national curriculum.", ne: "राष्ट्रिय पाठ्यक्रम अनुसार केन्द्रित तयारी।" } },
+export const programs: { title: T; text: T }[] = [
+  { title: { en: "Early Childhood Education", ne: "प्रारम्भिक बाल शिक्षा" }, text: { en: "Play-based learning, early literacy and numeracy.", ne: "खेलमा आधारित सिकाइ, प्रारम्भिक अक्षर र अङ्क ज्ञान।" } },
+  { title: { en: "Primary Education", ne: "प्राथमिक शिक्षा" }, text: { en: "Strong basics in English, Nepali, mathematics and our environment.", ne: "अङ्ग्रेजी, नेपाली, गणित र हाम्रो वरिपरिमा बलियो आधार।" } },
+  { title: { en: "Basic Education", ne: "आधारभूत शिक्षा" }, text: { en: "Broader subjects, projects and independent study habits.", ne: "विस्तृत विषय, परियोजना कार्य र स्वाध्यायको बानी।" } },
+  { title: { en: "Secondary Education", ne: "माध्यमिक शिक्षा" }, text: { en: "Focused preparation following the national curriculum.", ne: "राष्ट्रिय पाठ्यक्रम अनुसार केन्द्रित तयारी।" } },
 ];
 
 export const facilities: { key: string; title: T; text: T }[] = [
   { key: "classroom", title: { en: "Classrooms", ne: "कक्षाकोठा" }, text: { en: "Bright, orderly learning spaces.", ne: "उज्यालो र व्यवस्थित सिकाइ स्थल।" } },
-  { key: "library", title: { en: "Library", ne: "पुस्तकालय" }, text: { en: "To be confirmed by the school.", ne: "विद्यालयबाट पुष्टि हुन बाँकी।" } },
-  { key: "science", title: { en: "Science Laboratory", ne: "विज्ञान प्रयोगशाला" }, text: { en: "To be confirmed by the school.", ne: "विद्यालयबाट पुष्टि हुन बाँकी।" } },
-  { key: "computer", title: { en: "Computer Education", ne: "कम्प्युटर शिक्षा" }, text: { en: "To be confirmed by the school.", ne: "विद्यालयबाट पुष्टि हुन बाँकी।" } },
   { key: "sports", title: { en: "Sports and Games", ne: "खेलकुद" }, text: { en: "Open ground for games and sports days.", ne: "खेल र खेलकुद दिवसका लागि खुला मैदान।" } },
   { key: "campus", title: { en: "School Infrastructure", ne: "विद्यालय पूर्वाधार" }, text: { en: "Campus set among the hills of Rolpa.", ne: "रोल्पाका पहाडबीच रहेको परिसर।" } },
 ];
