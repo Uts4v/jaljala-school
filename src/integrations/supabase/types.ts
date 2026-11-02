@@ -14,7 +14,117 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admission_inquiries: {
+        Row: {
+          applying_grade: string
+          created_at: string
+          date_of_birth: string
+          email: string | null
+          gender: string
+          guardian_name: string
+          id: string
+          message: string | null
+          phone: string
+          previous_school: string | null
+          status: string
+          student_name: string
+        }
+        Insert: {
+          applying_grade: string
+          created_at?: string
+          date_of_birth: string
+          email?: string | null
+          gender: string
+          guardian_name: string
+          id?: string
+          message?: string | null
+          phone: string
+          previous_school?: string | null
+          status?: string
+          student_name: string
+        }
+        Update: {
+          applying_grade?: string
+          created_at?: string
+          date_of_birth?: string
+          email?: string | null
+          gender?: string
+          guardian_name?: string
+          id?: string
+          message?: string | null
+          phone?: string
+          previous_school?: string | null
+          status?: string
+          student_name?: string
+        }
+        Relationships: []
+      }
+      contact_messages: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          message: string
+          name: string
+          phone: string | null
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id?: string
+          message: string
+          name: string
+          phone?: string | null
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          phone?: string | null
+        }
+        Relationships: []
+      }
+      notices: {
+        Row: {
+          attachment_url: string | null
+          category: string
+          created_at: string
+          id: string
+          is_published: boolean
+          published_on: string
+          summary_en: string
+          summary_ne: string
+          title_en: string
+          title_ne: string
+        }
+        Insert: {
+          attachment_url?: string | null
+          category: string
+          created_at?: string
+          id?: string
+          is_published?: boolean
+          published_on?: string
+          summary_en: string
+          summary_ne: string
+          title_en: string
+          title_ne: string
+        }
+        Update: {
+          attachment_url?: string | null
+          category?: string
+          created_at?: string
+          id?: string
+          is_published?: boolean
+          published_on?: string
+          summary_en?: string
+          summary_ne?: string
+          title_en?: string
+          title_ne?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
