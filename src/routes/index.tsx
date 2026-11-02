@@ -9,7 +9,7 @@ import { EventsSection, FacilitiesSection, FeaturesSection, NoticesSection, Prin
 import { ContactSection } from "@/components/site/Forms";
 
 const heroSlides = [img.classroom, img.hero, img.culture, img.sports, img.science];
-const socialPreview = "https://jaljala-school.netlify.app/social-preview.jpg";
+const socialPreview = "https://jaljala-school.netlify.app/social-preview.jpg?v=2";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -19,9 +19,12 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Jaljala English Boarding School | Sulichaur, Rolpa" },
       { property: "og:description", content: "Building bright futures through quality education in Sulichaur, Rolpa, Nepal." },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Jaljala English Boarding School" },
+      { property: "og:url", content: "https://jaljala-school.netlify.app/" },
       { property: "og:image", content: socialPreview },
-      { property: "og:image:width", content: "1280" },
-      { property: "og:image:height", content: "960" },
+      { property: "og:image:type", content: "image/jpeg" },
+      { property: "og:image:width", content: "1920" },
+      { property: "og:image:height", content: "1088" },
       { property: "og:image:alt", content: "Students walking to school in the hills of Rolpa" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Jaljala English Boarding School | Sulichaur, Rolpa" },
