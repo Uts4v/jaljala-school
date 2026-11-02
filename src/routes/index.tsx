@@ -18,7 +18,13 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: "Jaljala English Boarding School | Sulichaur, Rolpa" },
       { property: "og:description", content: "Building bright futures through quality education in Sulichaur, Rolpa, Nepal." },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: img.hero },
+      { property: "og:image:alt", content: "Students walking to school in the hills of Rolpa" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Jaljala English Boarding School | Sulichaur, Rolpa" },
+      { name: "twitter:description", content: "Building bright futures through quality education in Sulichaur, Rolpa, Nepal." },
+      { name: "twitter:image", content: img.hero },
+      { name: "twitter:image:alt", content: "Students walking to school in the hills of Rolpa" },
     ],
     scripts: [{
       type: "application/ld+json",
