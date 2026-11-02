@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <path d="M24 2 44 9v14c0 12-8.5 20-20 23C12.5 43 4 35 4 23V9Z" fill="#142b4a"/>
+  <path d="M24 6 40 11.5V23c0 9.6-6.6 16.3-16 19-9.4-2.7-16-9.4-16-19V11.5Z" fill="none" stroke="#c8a951" stroke-width="1.5"/>
+  <path d="m12 30 7-11 4 6 4-9 9 14Z" fill="#c8a951"/>
+  <text x="24" y="38" text-anchor="middle" font-family="Arial,sans-serif" font-size="6.5" font-weight="700" letter-spacing="1" fill="#f7f6f1">JEBS</text>
+</svg>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useLang } from "@/lib/i18n";
 import { school, ui } from "@/content/site";
 import { img } from "@/lib/images";
-import { EventsSection, FacilitiesSection, FeaturesSection, NoticesSection, ProgramsSection, WelcomeSection } from "@/components/site/Sections";
+import { EventsSection, FacilitiesSection, FeaturesSection, NoticesSection, PrincipalSection, ProgramsSection, WelcomeSection } from "@/components/site/Sections";
 import { ContactSection } from "@/components/site/Forms";
 
 const heroSlides = [img.classroom, img.hero, img.culture, img.sports, img.science];
@@ -94,6 +94,7 @@ function Index() {
         </div>
       </section>
       <WelcomeSection />
+      <PrincipalSection />
       <FeaturesSection />
       <ProgramsSection />
       <FacilitiesSection />
